@@ -3,20 +3,20 @@ import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useRef, useState } from "react";
 import {
-    Dimensions,
-    Image,
-    Platform,
-    ScrollView,
-    Text,
-    ToastAndroid,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  Image,
+  Platform,
+  ScrollView,
+  Text,
+  ToastAndroid,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
-import { useAddBooking } from "../hooks/useBookingMutation";
-import { useProperties } from "../hooks/useProperties";
+import { useAddBooking } from "../../hooks/useBookingMutation";
+import { useProperties } from "../../hooks/useProperties";
 
 const { width } = Dimensions.get("window");
 
@@ -79,7 +79,7 @@ export default function PropertyDetail() {
           ))}
         </ScrollView>
 
-        {/* Dots */}
+        {/* carousel Dots */}
         <View style={tw`flex-row justify-center mt-2`}>
           {property.images.map((_, index) => (
             <View

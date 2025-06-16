@@ -1,15 +1,15 @@
 import Button from "@/components/UI/Button";
 import {
-    ActivityIndicator,
-    Image,
-    ScrollView,
-    Text,
-    View,
+  ActivityIndicator,
+  Image,
+  ScrollView,
+  Text,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
-import { PROFILE_TEXT } from "../constants";
-import { useUserProfile } from "../hooks/useUserProfile";
+import { PROFILE_TEXT } from "../../constants";
+import { useUserProfile } from "../../hooks/useUserProfile";
 
 export default function ProfileScreen() {
   const { data: user, isLoading, isError } = useUserProfile();

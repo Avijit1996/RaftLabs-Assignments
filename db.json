@@ -58,27 +58,6 @@
       "checkIn": "2024-02-01",
       "checkOut": "2024-02-05",
       "status": "confirmed"
-    },
-    {
-      "id": "1750074948314",
-      "propertyId": "2",
-      "checkIn": "2024-02-01",
-      "checkOut": "2024-02-05",
-      "status": "confirmed"
-    },
-    {
-      "id": "1750076022024",
-      "propertyId": "1",
-      "checkIn": "2024-02-01",
-      "checkOut": "2024-02-05",
-      "status": "confirmed"
-    },
-    {
-      "id": "1750076589221",
-      "propertyId": "1",
-      "checkIn": "2024-02-01",
-      "checkOut": "2024-02-05",
-      "status": "confirmed"
     }
   ],
   "profile": {

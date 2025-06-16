@@ -7,18 +7,15 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
-import { BOOKING_TEXT } from "../constants";
-import { useBookings } from "../hooks/useBookings";
-import { useProperties } from "../hooks/useProperties";
+import { BOOKING_TEXT } from "../../constants";
+import { useBookings } from "../../hooks/useBookings";
+import { useProperties } from "../../hooks/useProperties";
 
 export default function BookingsScreen() {
     const { data: bookings, isLoading } = useBookings();
-    
     const { data: properties } = useProperties();
-
     const getPropertyById = (id: string) =>
         properties?.find((p) => p.id === id);
-
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
         return date.toLocaleDateString("en-US", {

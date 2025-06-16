@@ -13,9 +13,9 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "twrnc";
 import SearchBar from "../components/UI/SearchBar";
-import { useAddBooking } from "./hooks/useBookingMutation";
-import { useProperties } from "./hooks/useProperties";
-import { useSearchStore } from "./store/useSearchStore";
+import { useAddBooking } from "../hooks/useBookingMutation";
+import { useProperties } from "../hooks/useProperties";
+import { useSearchStore } from "../store/useSearchStore";
 
 export default function HomeScreen() {
   const { query, setQuery } = useSearchStore();
