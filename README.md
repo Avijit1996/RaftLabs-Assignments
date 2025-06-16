@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
+# 🏡 Property Booking App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a property booking mobile application built using **React Native (Expo)**. It allows users to view property listings and make bookings with check-in and check-out dates. The app uses a **JSON server** as a mock backend and includes state management via Zustand and data fetching using React Query.
 
-## Get started
+---
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+- View property listings with images and location.
+- Book a property with check-in and check-out dates.
+- View a list of completed bookings.
+- Flash message on successful booking.
+- Uses React Query for API data and Zustand for state.
+- Tailwind-style styling via `twrnc`.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠 Tech Stack
 
-In the output, you'll find options to open the app in a
+- **React Native (Expo)**
+- **TypeScript**
+- **Zustand** – state management
+- **React Query** – data fetching
+- **JSON Server** – mock backend API
+- **twrnc** – Tailwind for React Native
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Getting Started
 
-## Get a fresh project
-
-When you're ready, run:
+ 1. Clone the Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/Avijit1996/RaftLabs-Assignments.git
+cd RaftLabs-Assignments
+```
+ 2. Install Dependencies
+
+ ```bash
+ npm install 
+
+ ```
+
+ or
+
+```bash
+
+yarn install
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Start the Mock Backend
 
-## Learn more
+We use json-server to simulate a backend API. If you don't have it installed globally:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+npm install -g json-server
 
-## Join the community
+```
 
-Join our community of developers creating universal apps.
+Then start the server:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+
+json-server --watch db.json --port 3001
+
+```
+
+Your mock API will now be available at:
+http://localhost:3001/
+
+Make sure your API base URL is correctly configured in the app (e.g. using Axios or fetch).
+
+4. Run the App
+
+To start the Expo development server:
+
+```bash
+
+npm run android
+
+```
+
+
+

@@ -60,23 +60,22 @@
       "status": "confirmed"
     },
     {
-      "id": "1750070998443",
-      "propertyId": "2",
-      "status": "confirmed"
-    },
-    {
-      "id": "1750071006926",
-      "propertyId": "1",
-      "status": "confirmed"
-    },
-    {
-      "id": "1750073831709",
-      "propertyId": "2",
-      "status": "confirmed"
-    },
-    {
       "id": "1750074948314",
       "propertyId": "2",
+      "checkIn": "2024-02-01",
+      "checkOut": "2024-02-05",
+      "status": "confirmed"
+    },
+    {
+      "id": "1750076022024",
+      "propertyId": "1",
+      "checkIn": "2024-02-01",
+      "checkOut": "2024-02-05",
+      "status": "confirmed"
+    },
+    {
+      "id": "1750076589221",
+      "propertyId": "1",
       "checkIn": "2024-02-01",
       "checkOut": "2024-02-05",
       "status": "confirmed"
