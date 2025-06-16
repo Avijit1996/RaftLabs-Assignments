@@ -1,29 +1,50 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { Ionicons } from "@expo/vector-icons";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Tabs } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
+export default function Layout() {
+  const queryClient = new QueryClient();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "#16A34A" }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="bookings/index"
+        options={{
+          title: "Bookings",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calendar-outline" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile/index"
+        options={{
+          title: "Profile",
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-outline" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="property/[id]"
+        options={{
+          href: null,
+          headerShown: false,
+        }}
+      />
+    </Tabs>
+    </QueryClientProvider>
   );
 }
